@@ -1,7 +1,49 @@
+@font-face {
+	font-family: Modak-Regular;
+	src: url(src/fonts/Modak-Regular.ttf);
+}
+@font-face {
+	font-family: ComingSoon-Regular;
+	src: url(src/fonts/ComingSoon-Regular.ttf);
+}
 /*	This is the main Stylesheet	*/
 * {
     margin: 0;
+    scroll-behavior: smooth;
+}
+body {
     background-color: #fefae0;
+    overflow-x: hidden;
+    background-size: 300% 300%;
+	background-image: linear-gradient(-45deg, #FFF199 0%, #EDFCB8 25%, #FCE2B8 51%, #fefae0 100%);
+	-webkit-animation: AnimateBG 20s ease infinite;
+     animation: AnimateBG 20s ease infinite;
+}
+
+  
+
+@-webkit-keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
@@ -16,34 +58,52 @@
     vertical-align: middle;
 }
 .logo img  {
-    width: 50px;
+    width: 80px;
     object-fit: contain;
 }
 .nav-button {
+	display: flex;
     margin: 20px;
     padding: 20px;
     height:  40px;
     width: 40px;
-    border-radius: 20%;
 	cursor: pointer;
+	border-radius: 10px;
     vertical-align: middle;
 	align-content: center;
-	transition: 0.250s ease-out;
-	border: 5px solid #fefae0;
+	align-items: center;
+	transition: 0.250s ease-in;
+	border: 0px solid transparent;
 	box-shadow: 0px 0px 0px #fefae0;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	background: rgba(221, 161, 94, 0.3);
 }
 .nav-button:hover {
-	border-radius: 40%;
-	border: 5px solid #bc6c25;
-	box-shadow: 5px 5px 3px #000000;
+	background: rgba(221, 161, 94, 0.5);
+	border: 0px solid #bc6c25;
+	width: 300px;
+}
+.nav-button:hover button {
+	display: flex;
+	opacity: 1;
 }
 .nav-button img {
     width: 40px;
     object-fit: contain;
 }
-
 .nav-button button {
-    display: none;
+    display: flex;
+    opacity: 0;
+    margin: 0px;
+    transition: .25s 0s ease-out;
+    background: transparent;
+    border: 0px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px black;
+}
+.nav-button button:hover {
+	box-shadow: 0px 0px 2px #000000;
 }
 
 /* Main Content */
@@ -56,8 +116,8 @@
 }
 #title h1 {
     color: #606c38;
-    font-size: 50px;
-    font-family: 'Lucida Sans';
+    font-size: 70px;
+    font-family: 'Modak-Regular';
     font-weight: 900;
     text-align: center;
     margin: 10px;
@@ -66,25 +126,36 @@
     margin: 10px;
     color: #283618;
     text-align: center;
-    font-family: 'Lucida Sans';
+    font-family: 'ComingSoon-Regular';
 }
 #title button {
-    border-radius: 10px;
+	border: 0px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px black;
     color: #fefae0;
     background-color: #bc6c25;
-    font-family: 'Lucida Sans';
+    background: ;
+    font-family: 'ComingSoon-Regular';
     font-size: 20px;
     margin: 10px;
+    padding: 0.5em;
+    transition: 0.25s ease-out;
 }
-
+#title button:hover {
+    background-color: #E88C5B;
+    color: #EBFFCA;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
 #carousel {
     justify-content: space-evenly;
     flex-direction: column;
     color: #606c38;
-    font-family: 'Lucida Sans';
+    font-family: 'Modak-Regular';
+    font-size: 30px;
     text-align: center;
+    letter-spacing: 3px;
     transition: 0.125s ease-out;
-    box-shadow: 100px 0px 10px black inset;
 }
 #carousel-item {
     justify-content: space-between;
@@ -103,12 +174,13 @@
     object-fit: contain;
 }
 #carousel-item button {
-    width: 40px;
-    height: 100px;
-    border-radius: 50%;
+    width: 100px;
+    height: 300px;
     border: 0px solid black;
-    background-color: none;
+    background-color: transparent;
     margin: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
     align-content: center;
     vertical-align: middle;
     transition: .125s ease-out;
@@ -120,8 +192,7 @@
     background: transparent;
 }
 #carousel-item button:hover {
-	width: 70px;
+	width: 200px;
 }
 #carousel-item button:hover #carousel {
-	box-shadow: 10px 10px 5px black inset;
 }
