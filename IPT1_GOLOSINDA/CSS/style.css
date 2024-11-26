@@ -167,36 +167,61 @@ body {
     margin: 50px;
     padding: 10px;
     box-shadow: 0px 0px 0px black;
+    transition: 0.25s ease-out;
 }
+.carousel-items:hover {
+	box-shadow: 0px 0px 5px black;
+	margin-right: 100px;
+	margin-left: 0px;
+} 
 .carousel-items img {
     width: 350px;
     height: 300px;
     object-fit: contain;
 }
-#carousel-item button {
-    width: 100px;
-    height: 300px;
-    border: 0px solid black;
-    background-color: transparent;
-    margin: 40px;
-    margin-left: 0px;
-    margin-right: 0px;
-    align-content: center;
-    vertical-align: middle;
-    transition: .125s ease-out;
-    cursor: pointer;
+.carousel-items h3 {
+	color: #606c38;
+	text-decoration: none;
 }
-#carousel-item button img {
-    width: 30px;
-    height: 30px;
-    background: transparent;
+.carousel-items h3:active {
+	text-decoration: none;
 }
-#carousel-item button:hover {
-	width: 200px;
+/*	About Page	*/
+#about-container {
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10% 50px 10%;
+    border: 5px solid rgba(221, 161, 94, 1.0);
+    border-radius: 50px;
+    background-color: rgba(221, 161, 94, 0.3);
+    box-shadow: 0px 0px 0px black;
+    transition: 0.25s ease-out;
 }
-#carousel-item button:hover #carousel {
+#about-container:hover {
+    border: 5px solid rgba(221, 161, 94, .5);
+	background-color: rgba(221, 161, 94, 0.5);
+	box-shadow: 20px 30px 0px black;
+	margin: 10px 11% 50px 9%;
 }
-
+#about-container h1 {
+    color: #606c38;
+    font-size: 50px;
+    font-family: 'Modak-Regular';
+    font-weight: 900;
+    text-align: center;
+    margin: 50px ;
+}
+#about-container h2 {
+    margin: 20px 10% 70px 10%;
+    color: #283618;
+    text-align: justify;
+    font-family: 'ComingSoon-Regular';
+}
+#mypic {
+	border-radius: 50% 50% 10px 10px;
+	margin: 100px;
+}
 
 /*	Contact Page	*/
 #socials-container {
@@ -205,9 +230,6 @@ body {
 	justify-content: space-evenly;
 	align-items: center;
 }
-#socials-container a {
-
-}
 #socials-container svg  {
 	margin: 20px;
 	position: relative;
@@ -215,7 +237,7 @@ body {
 	height: 100px;
 }
 
-/*	Presentations Page	*/
+/*	Portfolio Page	*/
 #ppt-container {
     flex-direction: column;
     justify-content: center;
@@ -245,4 +267,54 @@ body {
 	width: 30%;
 	margin: 10px;
 	border-radius: 20px;
+	box-shadow: 0px 0px 0px black;
+	transition: 0.25s ease-out;
+}
+#ppts img:hover {
+	box-shadow: 0px 0px 5px black;
+	margin-right: 100px;
+}
+#edits-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#edits-container h1 {
+    color: #606c38;
+    font-size: 70px;
+    font-family: 'Modak-Regular';
+    font-weight: 900;
+    text-align: center;
+    margin: 10px;
+}
+#edits-container h2 {
+    margin: 10px;
+    color: #283618;
+    text-align: center;
+    font-family: 'ComingSoon-Regular';
+}
+#edits {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#edits img {
+	width: 40%;
+	margin: 10px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px black;
+	transition: 0.25s ease-out;
+}
+#pages-container {
+    justify-content: space-evenly;
+    flex-wrap: wrap;x
+    margin-bottom: 50px;
+}
+#pages-container img {
+	width: 50%;
+	margin: 10px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px black;
+	transition: 0.25s ease-out;
 }
